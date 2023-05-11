@@ -7,10 +7,16 @@
   <title>Document</title>
 </head>
 <body>
+  <div>测试~</div>
+  <button>点击此处（不会上报）</button>
+  <button target-key="btn">点击此e处（会上报）</button>
   <script src="./dist/index.js"></script>
   <script>
     new tracker({
-      historyTracker: true
+      requestUrl: 'http://localhost:9000/track',
+      historyTracker: true,
+      domTracker: true,
+      jsError: true
     })
   </script>
 </body>

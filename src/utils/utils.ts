@@ -1,3 +1,4 @@
+// 重写history方法
 export const createHistory = <T extends keyof History>(type: T) => {
   const origin = history[type]
   return function (this:any) {
